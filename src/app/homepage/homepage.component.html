@@ -1,0 +1,186 @@
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Allocation Dashboard</title>
+</head> -->
+
+<body>
+    <div class="container">
+
+
+        <div class="token-allocation">
+            <h2>Token Allocation</h2>
+            <div class="allocation-chart" id="token-allocation-chart">
+
+                <!-- simple arc chart -->
+                <div class="wrapper">
+                    <tui-arc-chart
+                        size="l"
+                        [value]="[40]"
+                    ></tui-arc-chart>
+                    <tui-arc-chart
+                        maxLabel=""
+                        minLabel=""
+                        size="l"
+                        class="stacked"
+                        [value]="[20]"
+                    >
+                    </tui-arc-chart>
+                </div>
+            </div>
+            <div class="allocation-details">
+                <p>Total Value <span>$30,000,000</span></p>
+                <ul>
+                    <li>Vested: 70%</li>
+                    <li>Locked: 16%</li>
+                    <li>On Exchange: 11%</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="defi-allocation">
+            <h2>DeFi Allocation</h2>
+            <div class="allocation-chart" id="defi-allocation-chart">
+
+                <!-- multi arc chart -->
+                <tui-input-count
+                    class="b-form"
+                    [(ngModel)]="activeItemIndex"
+                >
+                </tui-input-count>
+                <div class="mulitArcChartwrapper">
+                    <tui-arc-chart
+                        size="l"
+                        class="tui-space_right-4"
+                        [value]="mulitArcValue2"
+                        [(activeItemIndex)]="activeItemIndex"
+                    >
+                    </tui-arc-chart>
+
+                </div>
+                <!-- end multi arc chart -->
+
+
+            </div>
+            <div class="allocation-details">
+                <p>Total Value <span>$18,000,000</span></p>
+                <ul>
+                    <li>Staked: 98%</li>
+                    <li>dYdX: 2%</li>
+                    <li>TraderJoe: <1%</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="history-allocation">
+            <h2>Yields</h2>
+            <div class="history-chart" id="token-history-chart">
+
+                <!-- history chart -->
+                <tui-axes
+                class="axes"
+                [horizontalLines]="2"
+                [tuiLineChartHint]="hintContent"
+                [verticalLines]="4"
+            >
+                <tui-line-chart
+                    [dots]="true"
+                    [height]="200"
+                    [value]="multiLineValueFuckAll"
+                    [width]="400"
+                    [x]="0"
+                    [xStringify]="stringify"
+                    [y]="0"
+                    [yStringify]="stringify"
+                ></tui-line-chart>
+            </tui-axes>
+
+
+                <!-- <tui-line-chart
+                        [dots]="true"
+                        [height]="200"
+                        [value]="multiLineValueFuckAll"
+                        [width]="400"
+                        [x]="0"
+                        [xStringify]="stringify"
+                        [y]="0"
+                        [yStringify]="stringify"
+                    ></tui-line-chart> -->
+
+              
+                <!-- end history chart end -->
+                
+            </div>
+            <div class="allocation-details">
+                <p>Total Value <span>$69,420</span></p>
+                <ul>
+                    <li>Staking: 70%</li>
+                    <li>Funding Rate: 16%</li>
+                    <li>LP Positions: 11%</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="all-tokens">
+        <h2>All Tokens (6)</h2>
+        <div class="tokens-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Token</th>
+                        <th>Price</th>
+                        <th>Balance</th>
+                        <th>Value</th>
+                        <th>Allocation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ETH</td>
+                        <td>$3,852.27</td>
+                        <td>0.00539037</td>
+                        <td>$20.76</td>
+                        <td>69.51%</td>
+                    </tr>
+                    <tr>
+                        <td>AVAX</td>
+                        <td>$36.66</td>
+                        <td>0.1324869</td>
+                        <td>$4.857</td>
+                        <td>16.28%</td>
+                    </tr>
+                    <tr>
+                        <td>USDC</td>
+                        <td>$0.9991</td>
+                        <td>3.2561</td>
+                        <td>$3.25</td>
+                        <td>10.88%</td>
+                    </tr>
+                    <tr>
+                        <td>USDC</td>
+                        <td>$0.9992</td>
+                        <td>0.9499</td>
+                        <td>$0.95</td>
+                        <td>3.18%</td>
+                    </tr>
+                    <tr>
+                        <td>FXS</td>
+                        <td>$4.77</td>
+                        <td>0.0102</td>
+                        <td>$0.05</td>
+                        <td>0.17%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+
+
+
