@@ -1,0 +1,341 @@
+
+<!-- <body> -->
+<div class="perp-position-page">
+
+
+
+    <div class="container1">
+        <div class="vertex-allocation">
+            <h2>Vertex Activity</h2>
+            <div>
+                <div class="chart1">
+                    <canvasjs-chart [options]="cpuChartOptions" (chartInstance)="getChartInstance($event)" [styles]="{width: '50%', height: '300px', 'float': 'left' }"></canvasjs-chart>
+                </div>
+
+                <div  class="chart2">
+                    <canvasjs-chart [options]="memoryChartOptions" (chartInstance)="getChartInstance($event)" [styles]="{width: '50%', height: '300px', 'float': 'left'}"></canvasjs-chart>
+                </div>
+
+                <canvasjs-chart [options]="networkChartOptions" (chartInstance)="getChartInstance($event)" [styles]="{width: '50%', height: '300px', 'float': 'left'}"></canvasjs-chart>
+                <canvasjs-chart [options]="diskChartOptions" (chartInstance)="getChartInstance($event)" [styles]="{width: '50%', height: '300px', 'float': 'left'}"></canvasjs-chart>	
+                
+            </div>    
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="container">
+
+
+        <div class="token-allocation">
+            <h2>Initial Margin</h2>
+            <h2><span style="color: rgb(61, 255, 47)">25.00% </span> Margin Usage</h2>
+            <h2>$28,000 Funds Available</h2>
+        </div>
+
+        <div class="defi-allocation">
+            <h2>Maintenance Margin</h2>
+            <h2>$16,000 Funds Until Liq.</h2>
+            <h2><span style="color: rgb(61, 255, 47)">4.27% </span> Liquidation Risk</h2>
+        </div>
+
+        <div class="history-allocation">
+            <h2><span style="color: rgb(61, 255, 47)">15.33% </span> P&L</h2>
+            <h2>$12,000 Total Notional</h2>
+            <h2>$5,000 Margin Used</h2>
+        </div>
+
+
+    </div>
+
+    <!-- <div class="container2">
+
+
+        <div class="staking-allocation">
+            <h2>Staking Allocation</h2>
+            <div>
+                
+            </div>
+
+        </div>
+
+        <div class="rewards-allocation">
+            <h2>Staking Yield %</h2>
+            <div>
+                
+            </div>
+        </div>
+
+
+    </div> -->
+
+    <div class="all-tokens">
+        <h2>Open Orders</h2>
+        <div class="tokens-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Txn ID</th>
+                        <th>Market / Side</th>
+                        <th>Position Size</th>
+                        <th>Margin</th>
+                        <th>Entry Price</th>
+                        <th>Oracle Price</th>
+                        <th>Est. Liquidation Price</th>
+                        <th>Est. PnL</th>
+                        <th>TP/SL</th>
+                        <th>Funding</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd" style="color:#36AE7C;" target="_blank">
+                                0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$732</td>
+                        <td>$35.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$55.90</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0xbeb255454cc19fc34456c54926116a2dffd841826f20f7a830bf0bdb6f7dde04" style="color:#36AE7C;" target="_blank">
+                                0xbeb255454cc19fc34456c54926116a2dffd841826f20f7a830bf0bdb6f7dde04
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$727</td>
+                        <td>$32.55</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$75.80</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x0e26cf4184812258025e918f6d3d28664e5a5fd0e2ce9db8e4bb636580ed219a" style="color:#36AE7C;" target="_blank">
+                                0x0e26cf4184812258025e918f6d3d28664e5a5fd0e2ce9db8e4bb636580ed219a
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$730</td>
+                        <td>$31.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$85.77</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd" style="color:#36AE7C;" target="_blank">
+                                0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$733</td>
+                        <td>$35.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$55.90</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                
+
+
+
+                    
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd" style="color:#36AE7C;" target="_blank">
+                                0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$714</td>
+                        <td>$35.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$55.90</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0xbeb255454cc19fc34456c54926116a2dffd841826f20f7a830bf0bdb6f7dde04" style="color:#36AE7C;" target="_blank">
+                                0xbeb255454cc19fc34456c54926116a2dffd841826f20f7a830bf0bdb6f7dde04
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$721</td>
+                        <td>$32.55</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$75.80</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x0e26cf4184812258025e918f6d3d28664e5a5fd0e2ce9db8e4bb636580ed219a" style="color:#36AE7C;" target="_blank">
+                                0x0e26cf4184812258025e918f6d3d28664e5a5fd0e2ce9db8e4bb636580ed219a
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$739</td>
+                        <td>$31.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$85.77</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd" style="color:#36AE7C;" target="_blank">
+                                0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$737</td>
+                        <td>$35.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$55.90</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+
+
+                    
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd" style="color:#36AE7C;" target="_blank">
+                                0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$732</td>
+                        <td>$35.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$55.90</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0xbeb255454cc19fc34456c54926116a2dffd841826f20f7a830bf0bdb6f7dde04" style="color:#36AE7C;" target="_blank">
+                                0xbeb255454cc19fc34456c54926116a2dffd841826f20f7a830bf0bdb6f7dde04
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$727</td>
+                        <td>$32.55</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$75.80</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x0e26cf4184812258025e918f6d3d28664e5a5fd0e2ce9db8e4bb636580ed219a" style="color:#36AE7C;" target="_blank">
+                                0x0e26cf4184812258025e918f6d3d28664e5a5fd0e2ce9db8e4bb636580ed219a
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$730</td>
+                        <td>$31.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$85.77</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transaction-id-column">
+                            <a href="https://arbiscan.io/tx/0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd" style="color:#36AE7C;" target="_blank">
+                                0x569ce3f14063ce1a6f0e46d61aa92f7d80f190e3405e54364562e92ca44dd4fd
+                            </a>
+                        </td>
+                        <td class="start-time-column">SELL</td>
+                        <td class="end-time-column">20.00 AVAX</td>
+                        <td>$733</td>
+                        <td>$35.20</td>
+                        <td >$36.04</td>
+                        <td >$45.00</td>
+                        <td><span style="color: rgb(255, 47, 47)">-$55.90</span></td>
+                        <td >$44.99</td>
+                        <td><span style="color: rgb(61, 255, 47)">+0.0003%</span></td>
+                    </tr>
+
+
+
+
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    
+
+
+
+
+<!-- </body> -->
+
+
+
+
+
