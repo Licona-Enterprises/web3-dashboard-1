@@ -1,0 +1,82 @@
+.button1 {
+    /* margin: 30px; */
+    margin-bottom: 115px;
+    width: 15%;
+}
+
+.overlay {
+    background-color: #1e1e1e;
+    position: fixed; /* Fixed position */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(238, 1, 1, 0.5)!important; /* Black background with opacity */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    display: flex; /* Center the content inside */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it is on top */
+
+    flex-direction: column;
+}
+
+
+.overlay-button {
+    background-color: #001eff;
+    color: #fefefe;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+}
+
+.background2 {
+    /* background-image: url('../images/lighting1.jpg'); */
+    
+    /* background-image: url('../../../public/lighting2.jpg');
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* background-size: cover; */
+    /* background-size: cover; */
+
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    /* background: rgba(243, 5, 5, 0.5)!important; */
+    background: hsl(0deg 0% 0%);
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+
+    flex-direction: column;
+}
+
+.background3{
+    background-image: url('../../../public/lighting2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+    position: fixed; /* Fixed position */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* background: rgba(243, 5, 5, 0.5)!important; */
+     /* Black background with opacity */
+    /* backdrop-filter: blur(10px); Apply blur effect */
+    display: flex; /* Center the content inside */
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: flex-end;
+    z-index: 1000; /* Ensure it is on top */
+
+    flex-direction: column;
+}
