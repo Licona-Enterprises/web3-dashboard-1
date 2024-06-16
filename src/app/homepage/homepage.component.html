@@ -1,294 +1,84 @@
 
-
-    <!-- <div class="home-page">
-
-            
-        <div *ngIf="isVisible; else elseBlock" class="overlay">
-            <div>
-                <button class="overlay-button" (click)="openMetaMaskWallet()"> 
-                    CONNECT WALLET
-                </button>
-            </div>
-        </div>
-
-
-
-
-        <ng-template #elseBlock>
-            <div class="container">
-                <div class="token-allocation">
-                    <h2>Token Allocation</h2>
-                    <div class="allocation-chart" id="token-allocation-chart">
-        
-                        <div class="wrapper">
-                            <tui-arc-chart
-                                size="l"
-                                [value]="[40]"
-                            ></tui-arc-chart>
-                            <tui-arc-chart
-                                maxLabel=""
-                                minLabel=""
-                                size="l"
-                                class="stacked"
-                                [value]="[20]"
-                            >
-                            </tui-arc-chart>
-                        </div>
-                    </div>
-                    <div class="allocation-details">
-                        <p>Total Value <span>$30,000,000</span></p>
-                        <ul>
-                            <li>Vested: 70%</li>
-                            <li>Locked: 16%</li>
-                            <li>On Exchange: 11%</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="defi-allocation">
-                    <h2>DeFi Allocation</h2>
-                    <div class="allocation-chart" id="defi-allocation-chart">
-     
-                        <tui-input-count
-                            class="b-form"
-                            [(ngModel)]="activeItemIndex"
-                        >
-                        </tui-input-count>
-                        <div class="mulitArcChartwrapper">
-                            <tui-arc-chart
-                                size="l"
-                                class="tui-space_right-4"
-                                [value]="mulitArcValue2"
-                                [(activeItemIndex)]="activeItemIndex"
-                            >
-                            </tui-arc-chart>
-        
-                        </div>
- 
-        
-        
-                    </div>
-                    <div class="allocation-details">
-                        <p>Total Value <span>$18,000,000</span></p>
-                        <ul>
-                            <li>Staked: 98%</li>
-                            <li>dYdX: 2%</li>
-                            <li>TraderJoe: <1%</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="history-allocation">
-                    <h2>Yields</h2>
-                    <div class="history-chart" id="token-history-chart">
-     
-                        <tui-axes
-                        class="axes"
-                        [horizontalLines]="2"
-                        [tuiLineChartHint]="hintContent"
-                        [verticalLines]="4"
-                    >
-                        <tui-line-chart
-                            [dots]="true"
-                            [height]="200"
-                            [value]="multiLineValueFuckAll"
-                            [width]="400"
-                            [x]="0"
-                            [xStringify]="stringify"
-                            [y]="0"
-                            [yStringify]="stringify"
-                        ></tui-line-chart>
-                    </tui-axes>
-
-
-                    </div>
-                    <div class="allocation-details">
-                        <p>Total Value <span>$69,420</span></p>
-                        <ul>
-                            <li>Staking: 70%</li>
-                            <li>Funding Rate: 16%</li>
-                            <li>LP Positions: 11%</li>
-                        </ul>
-                    </div>
-                </div>
-        
-            </div>
-        
-            <div class="all-tokens">
-                <h2>All Tokens (6)</h2>
-                <div class="tokens-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Token</th>
-                                <th>Price</th>
-                                <th>Balance</th>
-                                <th>Value</th>
-                                <th>Allocation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ETH</td>
-                                <td>$3,852.27</td>
-                                <td>0.00539037</td>
-                                <td>$20.76</td>
-                                <td>69.51%</td>
-                            </tr>
-                            <tr>
-                                <td>AVAX</td>
-                                <td>$36.66</td>
-                                <td>0.1324869</td>
-                                <td>$4.857</td>
-                                <td>16.28%</td>
-                            </tr>
-                            <tr>
-                                <td>USDC</td>
-                                <td>$0.9991</td>
-                                <td>3.2561</td>
-                                <td>$3.25</td>
-                                <td>10.88%</td>
-                            </tr>
-                            <tr>
-                                <td>USDC</td>
-                                <td>$0.9992</td>
-                                <td>0.9499</td>
-                                <td>$0.95</td>
-                                <td>3.18%</td>
-                            </tr>
-                            <tr>
-                                <td>FXS</td>
-                                <td>$4.77</td>
-                                <td>0.0102</td>
-                                <td>$0.05</td>
-                                <td>0.17%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </ng-template>
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
- -->
-
- 
- <!-- <button (click)="openMetaMaskWallet()">Toggle Visibility</button> -->
- <div *ngIf="isVisible; else elseBlock">
-   <!-- The content is not visible. -->
+ <div>
+   
    <div class="home-page">
    <div class="container">
     <div class="token-allocation">
-        <h2>Token Allocation</h2>
-        <div class="allocation-chart" id="token-allocation-chart">
+        
+        <div class="avax-allocation" id="token-allocation-chart">
+            
 
-            <div class="wrapper">
-                <tui-arc-chart
-                    size="l"
-                    [value]="[40]"
-                ></tui-arc-chart>
-                <tui-arc-chart
-                    maxLabel=""
-                    minLabel=""
-                    size="l"
-                    class="stacked"
-                    [value]="[20]"
-                >
-                </tui-arc-chart>
-            </div>
+                <!-- avax allocation chart -->
+                <div>
+                    <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>
+                </div> 
+
+                <!-- end avax allocation chart -->
+
+            
         </div>
         <div class="allocation-details">
-            <p>Total Value <span>$30,000,000</span></p>
+            <h2>Avax Allocation</h2>
+            <p>Total Value <span>$2,500,000</span></p>
             <ul>
-                <li>Vested: 70%</li>
-                <li>Locked: 16%</li>
-                <li>On Exchange: 11%</li>
+                <li>
+                    FDA QS Wallet: <a href="https://subnets.avax.network/p-chain/address/avax10f8305248c0wsfsdempdtpx7lpkc30vwzl9y9q" style="color:#36AE7C;" target="_blank">avax10f8305248c0wsfsdempdtpx7lpkc30vwzl9y9q</a>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="defi-allocation">
-        <h2>DeFi Allocation</h2>
-        <div class="allocation-chart" id="defi-allocation-chart">
-
-            <tui-input-count
-                class="b-form"
-                [(ngModel)]="activeItemIndex"
-            >
-            </tui-input-count>
-            <div class="mulitArcChartwrapper">
-                <tui-arc-chart
-                    size="l"
-                    class="tui-space_right-4"
-                    [value]="mulitArcValue2"
-                    [(activeItemIndex)]="activeItemIndex"
-                >
-                </tui-arc-chart>
-
-            </div>
-
-
-
-        </div>
-        <div class="allocation-details">
-            <p>Total Value <span>$18,000,000</span></p>
-            <ul>
-                <li>Staked: 98%</li>
-                <li>dYdX: 2%</li>
-                <li>TraderJoe: <1%</li>
-            </ul>
-        </div>
-    </div>
 
     <div class="history-allocation">
-        <h2>Yields</h2>
-        <div class="history-chart" id="token-history-chart">
+        <div id="token-history-chart">
 
-            <tui-axes
-            class="axes"
-            [horizontalLines]="2"
-            [tuiLineChartHint]="hintContent"
-            [verticalLines]="4"
-        >
-            <tui-line-chart
-                [dots]="true"
-                [height]="200"
-                [value]="multiLineValueFuckAll"
-                [width]="400"
-                [x]="0"
-                [xStringify]="stringify"
-                [y]="0"
-                [yStringify]="stringify"
-            ></tui-line-chart>
-        </tui-axes>
+            <!-- start yields chart -->
+            <div>
+                <canvasjs-chart [options]="chartOptions3" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>    
+            </div> 
+
+            <!-- end yields chart -->
 
 
         </div>
         <div class="allocation-details">
-            <p>Total Value <span>$69,420</span></p>
+            <h2>Yields</h2>
+            <p>Total Value <span>$12,500,000</span></p>
             <ul>
-                <li>Staking: 70%</li>
-                <li>Funding Rate: 16%</li>
-                <li>LP Positions: 11%</li>
+                <li>
+                    FDA QS Payout Address: <a href="https://subnets.avax.network/p-chain/address/avax19xkrgef0ywlvkxxzlhv9qqwk9gyt7w6k785qu8" style="color:#36AE7C;" target="_blank">avax19xkrgef0ywlvkxxzlhv9qqwk9gyt7w6k785qu8</a>
+                </li>
             </ul>
         </div>
     </div>
+
+
+    <div class="defi-allocation">
+        <div class="perp-allocation" id="defi-allocation-chart">
+
+            <!-- start perp allocation chart -->
+            <div>
+                <canvasjs-chart [options]="chartOptions2" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>    
+            </div> 
+            <!-- end perp allocation chart -->
+
+        </div>
+        <div class="allocation-details">
+            <h2>Perp Allocation</h2>
+            <p>Total Value <span>$10,000,000</span></p>
+            <ul>
+                <li>
+                    FDA QS Wallet: <a href="https://arbiscan.io/address/0x3014ab992464e3323d4b53570badf782ac897a67" style="color:#36AE7C;" target="_blank">0x3014Ab992464E3323D4b53570baDF782aC897a67</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 
 </div>
 
 <div class="all-tokens">
-    <h2>All Tokens (6)</h2>
+    <h2>All Tokens</h2>
     <div class="tokens-table">
         <table>
             <thead>
@@ -303,38 +93,31 @@
             <tbody>
                 <tr>
                     <td>ETH</td>
-                    <td>$3,852.27</td>
-                    <td>0.00539037</td>
-                    <td>$20.76</td>
-                    <td>69.51%</td>
+                    <td>$3,593.54</td>
+                    <td>2782.77</td>
+                    <td>$10,000,000.00</td>
+                    <td>80.00%</td>
                 </tr>
                 <tr>
                     <td>AVAX</td>
-                    <td>$36.66</td>
-                    <td>0.1324869</td>
-                    <td>$4.857</td>
-                    <td>16.28%</td>
+                    <td>$30.08</td>
+                    <td>83,111.70</td>
+                    <td>$2,500,000.00</td>
+                    <td>19.79%</td>
                 </tr>
                 <tr>
                     <td>USDC</td>
                     <td>$0.9991</td>
                     <td>3.2561</td>
                     <td>$3.25</td>
-                    <td>10.88%</td>
+                    <td>00.11%</td>
                 </tr>
                 <tr>
                     <td>USDC</td>
                     <td>$0.9992</td>
                     <td>0.9499</td>
                     <td>$0.95</td>
-                    <td>3.18%</td>
-                </tr>
-                <tr>
-                    <td>FXS</td>
-                    <td>$4.77</td>
-                    <td>0.0102</td>
-                    <td>$0.05</td>
-                    <td>0.17%</td>
+                    <td>00.10%</td>
                 </tr>
             </tbody>
         </table>
@@ -345,28 +128,3 @@
 
  </div>
  </div>
-
-
-
- <ng-template #elseBlock>
-   <!-- The content is visible. -->
-   <div class="overlay background2">
-    <div class="button1">
-        <button class="overlay-button" (click)="openMetaMaskWallet()"> 
-            CONNECT WALLET
-        </button>
-    </div>
-        <!-- <button class="overlay-button" (click)="openMetaMaskWallet()"> 
-            CONNECT WALLET
-        </button> -->
-        <div class="button1">
-        <button class="overlay-button" (click)="signMessage()"> 
-            Sign Message
-        </button>
-        </div>
-        
-    </div>
-    <!-- <button class="overlay-button" (click)="openMetaMaskWallet()"> 
-        CONNECT WALLET
-    </button> -->
- </ng-template>
