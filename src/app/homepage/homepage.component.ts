@@ -29,7 +29,7 @@ export class HomepageComponent {
 	  animationEnabled: true,
 	  theme: "dark1",
 	  title:{
-		text: "Social Media Engagement"
+		text: ""
 	  },
 	  data: [{
 		type: "pie",
@@ -38,12 +38,11 @@ export class HomepageComponent {
 		indexLabelPlacement: "inside",
 		yValueFormatString: "#,###.##'%'",
 		dataPoints: [
-		  { y: 21.3, name: "Facebook" },
-		  { y: 27.7, name: "Instagram" },
-		  { y: 17, name: "Twitter" },
-		  { y: 14.9, name: "LinkedIn" },
-		  { y: 10.6, name: "Pinterest" },
-		  { y: 8.5, name: "Others" }
+		  { y: 21.3, name: "Vested" },
+		  { y: 27.7, name: "Custody" },
+		  { y: 25.5, name: "Staked" },
+		  { y: 14.9, name: "Locked" },
+		  { y: 10.6, name: "Fireblocks" },
 		]
 	  }]
 	}
@@ -52,10 +51,14 @@ export class HomepageComponent {
 
   chartOptions2 = {
     title: {
-        text: "Productivity by Day"
+        text: ""
     },
     animationEnabled: true,
     theme: "dark1",
+    yValueFormatString: "#,###.##",
+    axisY: {
+        prefix: "$",
+    },
     axisX: {
         valueFormatString: "DDD"
     },
@@ -65,7 +68,8 @@ export class HomepageComponent {
             var weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
             var content = weekday[e.entries[0].dataPoint.x.getDay()] + "<br/>";
             for (var i = e.entries.length - 1; i >= 0; i--) {
-                content += "<span style ='color:" + e.entries[i].dataSeries.color + "; font-weight: bold;';>" + e.entries[i].dataSeries.name + "</span>:" + e.entries[i].dataPoint.y + "hrs";
+                var temp = e.entries[i].dataPoint.y;
+                content += "<span style ='color:" + e.entries[i].dataSeries.color + "; font-weight: bold;';>" + e.entries[i].dataSeries.name + "</span>: $" + temp.toLocaleString() + "";
                 content += "<br/>";
             }
             return content;
@@ -85,85 +89,119 @@ export class HomepageComponent {
     },
     data: [{
         type: "stackedArea",
-        name: "Very Distracting",
+        name: "Margin Usage",
         showInLegend: true,
         legendMarkerType: "square",
         color: "rgba(211,19,14,.9)",
         markerSize: 0,
         dataPoints: [
-            { x: new Date(2020, 2, 15), y: 2.4 },
-            { x: new Date(2020, 2, 16), y: .6 },
-            { x: new Date(2020, 2, 17), y: .8 },
-            { x: new Date(2020, 2, 18), y: 1.6 },
-            { x: new Date(2020, 2, 19), y: 1.4 },
-            { x: new Date(2020, 2, 20), y: 1.4 },
-            { x: new Date(2020, 2, 21), y: 2.6 }
+            // { x: new Date(2020, 2, 15), y: 2.4 },
+            // { x: new Date(2020, 2, 16), y: .6 },
+            // { x: new Date(2020, 2, 17), y: .8 },
+            // { x: new Date(2020, 2, 18), y: 1.6 },
+            // { x: new Date(2020, 2, 19), y: 1.4 },
+            // { x: new Date(2020, 2, 20), y: 1.4 },
+            // { x: new Date(2020, 2, 21), y: 2.6 }
+            { x: new Date(2020, 2, 15), y: 2400000 },
+            { x: new Date(2020, 2, 16), y: 600000 },
+            { x: new Date(2020, 2, 17), y: 800000 },
+            { x: new Date(2020, 2, 18), y: 1600000 },
+            { x: new Date(2020, 2, 19), y: 1400000 },
+            { x: new Date(2020, 2, 20), y: 1400000 },
+            { x: new Date(2020, 2, 21), y: 2600000 }
         ]
     },
     {
         type: "stackedArea",
-        name: "Distracting",
+        name: "Perp Position: Short AVAX",
         showInLegend: true,
         legendMarkerType: "square",
         markerSize: 0,
         color: "rgba(95,53,87,.9)",
         dataPoints: [
-            { x: new Date(2020, 2, 15), y: 3.3 },
-            { x: new Date(2020, 2, 16), y: 1.6 },
-            { x: new Date(2020, 2, 17), y: 2.1 },
-            { x: new Date(2020, 2, 18), y: 1.6 },
-            { x: new Date(2020, 2, 19), y: 1.4 },
-            { x: new Date(2020, 2, 20), y: 1.7 },
-            { x: new Date(2020, 2, 21), y: 4.6 }
+            // { x: new Date(2020, 2, 15), y: 3.3 },
+            // { x: new Date(2020, 2, 16), y: 1.6 },
+            // { x: new Date(2020, 2, 17), y: 2.1 },
+            // { x: new Date(2020, 2, 18), y: 1.6 },
+            // { x: new Date(2020, 2, 19), y: 1.4 },
+            // { x: new Date(2020, 2, 20), y: 1.7 },
+            // { x: new Date(2020, 2, 21), y: 4.6 }
+
+            { x: new Date(2020, 2, 15), y: 3300000 },
+            { x: new Date(2020, 2, 16), y: 1600000 },
+            { x: new Date(2020, 2, 17), y: 2100000 },
+            { x: new Date(2020, 2, 18), y: 1600000 },
+            { x: new Date(2020, 2, 19), y: 1400000 },
+            { x: new Date(2020, 2, 20), y: 1700000 },
+            { x: new Date(2020, 2, 21), y: 4600000 } 
         ]
     },
     {
         type: "stackedArea",
-        name: "Productive",
+        name: "Collateral Position: Long ETH",
         showInLegend: true,
         legendMarkerType: "square",
         markerSize: 0,
         color: "rgba(60,84,151,.9)",
         dataPoints: [
-            { x: new Date(2020, 2, 15), y: 2.4 },
-            { x: new Date(2020, 2, 16), y: 2 },
-            { x: new Date(2020, 2, 17), y: 2.8 },
-            { x: new Date(2020, 2, 18), y: 1.6 },
-            { x: new Date(2020, 2, 19), y: 1.4 },
-            { x: new Date(2020, 2, 20), y: 1.4 },
-            { x: new Date(2020, 2, 21), y: 1.6 }
+            // { x: new Date(2020, 2, 15), y: 2.4 },
+            // { x: new Date(2020, 2, 16), y: 2 },
+            // { x: new Date(2020, 2, 17), y: 2.8 },
+            // { x: new Date(2020, 2, 18), y: 1.6 },
+            // { x: new Date(2020, 2, 19), y: 1.4 },
+            // { x: new Date(2020, 2, 20), y: 1.4 },
+            // { x: new Date(2020, 2, 21), y: 1.6 }
+
+            { x: new Date(2020, 2, 15), y: 2400000 },
+            { x: new Date(2020, 2, 16), y: 2000000 },
+            { x: new Date(2020, 2, 17), y: 2800000 },
+            { x: new Date(2020, 2, 18), y: 1600000 },
+            { x: new Date(2020, 2, 19), y: 1400000 },
+            { x: new Date(2020, 2, 20), y: 1400000 },
+            { x: new Date(2020, 2, 21), y: 1600000 }
+
+            
         ]
     },
     {
         legendMarkerType: "square",
-        name: "Very Productive",
+        name: "Total Notional",
         showInLegend: true,
         type: "stackedArea",
         markerSize: 0,
         color: "rgba(22,115,211,.9)",
         dataPoints: [
-            { x: new Date(2020, 2, 15), y: .4 },
-            { x: new Date(2020, 2, 16), y: 7 },
-            { x: new Date(2020, 2, 17), y: 6.8 },
-            { x: new Date(2020, 2, 18), y: 4.6 },
-            { x: new Date(2020, 2, 19), y: 6.4 },
-            { x: new Date(2020, 2, 20), y: 7.4 },
-            { x: new Date(2020, 2, 21), y: 1.6 }
+            // { x: new Date(2020, 2, 15), y: .4 },
+            // { x: new Date(2020, 2, 16), y: 7 },
+            // { x: new Date(2020, 2, 17), y: 6.8 },
+            // { x: new Date(2020, 2, 18), y: 4.6 },
+            // { x: new Date(2020, 2, 19), y: 6.4 },
+            // { x: new Date(2020, 2, 20), y: 7.4 },
+            // { x: new Date(2020, 2, 21), y: 1.6 }
+
+            { x: new Date(2020, 2, 15), y: 400000 },
+            { x: new Date(2020, 2, 16), y: 7000000 },
+            { x: new Date(2020, 2, 17), y: 6800000 },
+            { x: new Date(2020, 2, 18), y: 4600000 },
+            { x: new Date(2020, 2, 19), y: 6400000 },
+            { x: new Date(2020, 2, 20), y: 7400000 },
+            { x: new Date(2020, 2, 21), y: 1600000 }
         ]
-    }]
+    }
+    ]
 }
 
 chartOptions3 = {
     animationEnabled: true,  
     theme: "dark1",
     title:{
-        text: "Average Monthly Rainfall"
+        text: ""
     },
     axisX: {
-        title: "Months"
+        // title: ""
     },
     axisY: { 
-        title: "Precipitation (inches)"                   
+        suffix: "%"               
     },
     toolTip: {
         shared: true
@@ -182,7 +220,7 @@ chartOptions3 = {
     data: [{        
         type: "spline",
         showInLegend: true,
-        name: "Boston",
+        name: "Staking Rate",
         dataPoints: [
           { label: "Jan", y: 3.92 },     
           { label: "Feb", y: 3.31 },     
@@ -200,7 +238,7 @@ chartOptions3 = {
     }, {        
         type: "spline",
         showInLegend: true,
-        name: "Los Angeles",
+        name: "Funding Rate",
         dataPoints: [
           { label: "Jan", y: 2.98 },     
           { label: "Feb", y: 3.11 },     
@@ -218,7 +256,7 @@ chartOptions3 = {
     }, {        
         type: "spline",
         showInLegend: true,
-        name: "Seattle",
+        name: "Figment Staking Reward Reference Rate (STKR)",
         dataPoints: [
           { label: "Jan", y: 5.24 },     
           { label: "Feb", y: 4.09 },     
